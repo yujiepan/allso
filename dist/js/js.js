@@ -4,13 +4,13 @@ function getHash() {
 }
 function set(t, o) {
   (localStorage["allso_" + t] = o),
-    0 == o
-      ? ((set_url[t] = "https://www.baidu.com/s?wd="), (set_top[t] = -45), (set_left[t] = -100), (set_foot[t] = 80))
+    3 == o
+      ? ((set_url[t] = "https://www.google.com/search?igu=1&q="), (set_top[t] = -88), (set_left[t] = -120), (set_foot[t] = 127))
       : 1 == o
       ? ((set_url[t] = "https://www.haosou.com/s?q="), (set_top[t] = 0), (set_left[t] = 0), (set_foot[t] = 80))
       : 2 == o
       ? ((set_url[t] = "https://cn.bing.com/search?setmkt=zh-cn&setlang=zh-cn&q="), (set_top[t] = -72), (set_left[t] = -80), (set_foot[t] = 60))
-      : 3 == o && ((set_url[t] = "https://www.search.ask.com/web?q="), (set_top[t] = -88), (set_left[t] = -145), (set_foot[t] = 127)),
+      : 0 == o && ((set_url[t] = "https://www.baidu.com/s?wd="), (set_top[t] = -45), (set_left[t] = -100), (set_foot[t] = 80)),
     (need_respond = !0);
 }
 function change_state(t) {
@@ -38,7 +38,7 @@ function so() {
     (obja[0].src = ""), (objb[0].src = "");
     var t = soinput_obj[0].value,
       o = encodeURIComponent(t);
-    0 == localStorage.allso_state ? ((obja[0].src = set_url[0] + o), (objb[0].src = set_url[1] + o)) : localStorage.allso_state < 0 ? (obja[0].src = set_url[0] + o) : (objb[0].src = set_url[1] + o),
+    0 == localStorage.allso_state ? ((objb[0].src = set_url[1] + o), (obja[0].src = set_url[0] + o)) : localStorage.allso_state < 0 ? (obja[0].src = set_url[0] + o) : (objb[0].src = set_url[1] + o),
       (location.hash = t),
       (window.document.title = t + " - ALLSO");
   } else (location.hash = ""), (window.document.title = "ALLSO - 聚合搜索引擎");

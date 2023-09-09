@@ -3,7 +3,7 @@
   <head>
     <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
     <meta charset="utf-8" />
-    <title>ALLSO - 聚合搜索引擎</title>
+    <title>聚合搜索引擎</title>
     <link href="http://h2y.github.io/allso" rel="canonical" />
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <style>
@@ -53,7 +53,7 @@
         border: 0;
         padding: 0;
         position: absolute;
-        top: 0;
+        top: 45px;
         left: 0;
       }
       #a {
@@ -117,6 +117,39 @@
         line-height: 36px;
       }
     </style>
+    <style>
+      .navbar-brand {
+        float: left;
+        height: 40px;
+        padding: 5px 15px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .navbar-nav > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .navbar {
+        position: relative;
+        height: 35px;
+        min-height: 30px;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+      }
+      form.navbar-form.navbar-right {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      div.progress {
+        margin-top: 5px;
+      }
+      #sobut {
+        padding-top: 4px;
+      }
+      body {
+        margin: 0px;
+      }
+    </style>
     <link href="static/fav.ico" rel="shortcut icon" />
   </head>
   <body>
@@ -131,13 +164,9 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid row">
         <div class="navbar-header">
-          <a href="http://h2y.github.io/allso" class="navbar-brand"><strong>&nbsp;ALLSO 聚合搜索引擎</strong></a>
+          <a href="#" class="navbar-brand"><strong>&nbsp; 聚合搜索引擎</strong></a>
         </div>
         <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-right" onsubmit="return false;">
-            <div class="form-group"><input id="soinput" type="text" class="form-control" name="s" placeholder="中原驿站 https://hzy.pw" /></div>
-            <button class="btn btn-primary" type="submit" onclick="so();" id="sobut">ALLSO 一下！</button>
-          </form>
           <ul class="nav navbar-nav navbar-left">
             <li><a href="#" data-toggle="modal" data-target="#set">搜索设置</a></li>
             <li class="dropdown">
@@ -149,6 +178,15 @@
                 <li><a href="https://hzy.pw/liuyanban" target="_blank">我有更好的意见需要反馈</a></li>
               </ul>
             </li>
+            <li>
+              <form class="navbar-form navbar-right" onsubmit="return false;">
+                <div class="form-group"><input id="soinput" type="text" class="form-control" name="s" placeholder="" style="min-height: 30px; height: 30px" /></div>
+                <button class="btn btn-primary" type="submit" onclick="so();" id="sobut" style="min-height: 30px; height: 30px">ALLSO 一下！</button>
+              </form>
+            </li>
+            <li>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </li>
           </ul>
           <div class="progress">
             <div class="progress-bar progress-bar-info" id="jdt1" onclick="change_state(true)">☀</div>
@@ -157,7 +195,10 @@
         </div>
       </div>
     </nav>
-    <iframe class="0" id="a"></iframe><iframe class="1" id="b"></iframe>
+    &nbsp;
+    <iframe class="0" id="a"></iframe>
+    &nbsp;
+    <iframe class="1" id="b"></iframe>
     <div class="modal fade" id="set">
       <div class="modal-dialog">
         <div class="modal-content">
