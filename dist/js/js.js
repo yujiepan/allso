@@ -5,11 +5,11 @@ function getHash() {
 function set(t, o) {
   (localStorage["allso_" + t] = o),
     3 == o
-      ? ((set_url[t] = "https://www.google.com/search?igu=1&q="), (set_top[t] = -88), (set_left[t] = -120), (set_foot[t] = 127))
+      ? ((set_url[t] = "https://www.google.com/search?igu=1&q="), (set_top[t] = -88), (set_left[t] = -5), (set_foot[t] = 40))
       : 1 == o
-      ? ((set_url[t] = "https://www.haosou.com/s?q="), (set_top[t] = 0), (set_left[t] = 0), (set_foot[t] = 80))
+      ? ((set_url[t] = "https://www.sogou.com/web?page=1&num=20&query="), (set_top[t] = 0), (set_left[t] = -40), (set_foot[t] = 80))
       : 2 == o
-      ? ((set_url[t] = "https://cn.bing.com/search?setmkt=zh-cn&setlang=zh-cn&q="), (set_top[t] = -72), (set_left[t] = -80), (set_foot[t] = 60))
+      ? ((set_url[t] = "https://cn.bing.com/search?setmkt=zh-cn&setlang=zh-cn&q="), (set_top[t] = -72), (set_left[t] = -145), (set_foot[t] = 10))
       : 0 == o && ((set_url[t] = "https://www.baidu.com/s?wd="), (set_top[t] = -45), (set_left[t] = -100), (set_foot[t] = 80)),
     (need_respond = !0);
 }
